@@ -18,3 +18,12 @@ CREATE TABLE naves (
 );
 
 INSERT INTO tipos(nome) VALUES ("Nave Mineradora");
+INSERT INTO tipos(nome) VALUES ("Nave Quadrada");
+INSERT INTO tipos(nome) VALUES ("Nave Dead Pool");
+
+INSERT INTO naves(nome, cor, tipos_id) VALUES ("Nave do Grimas", "Roxa", 1);
+INSERT INTO naves(nome, cor, tipos_id) VALUES ("Nave do Herik", "Laranja", 2);
+INSERT INTO naves(nome, cor, tipos_id) VALUES ("Nave do Jão3", "Preto", 3);
+
+SELECT naves.nome, tipos.nome FROM naves
+INNER JOIN tipos ON tipos.id = naves.tipos_id;
